@@ -11,11 +11,9 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    text-indent: 20px;
+    padding: 0;    
     text-decoration: none;
     background-color: transparent;
-    color: inherit;
 }
 html{
     scroll-behavior: smooth;
@@ -33,6 +31,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 #myself img{
     border-radius:40% ;
@@ -53,20 +52,22 @@ body{
     text-shadow: black 1px 1px 2px;
     font-weight: 600;
 }
+p{
+    font-family: 'google sans code', serif;
+    color: black;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 1em;
+    margin: 0;
+    text-indent: 20px;
+}
 header{
     text-align: center;
     background-image: linear-gradient(45deg, #ff8c9d47, #f2387c);
-    font-family: 'google sans code', serif;
-    color: white;
-    font-weight: 600;
-    text-shadow: black 1px 1px 2px;
     box-shadow: 0 0 2px rgba(0, 0, 0.5);
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;   
+    position: fixed;  
     width: 100%;
-    
 }
 header > span{
     display: inline-block;
@@ -75,17 +76,12 @@ header > span{
     padding: 20px 0 10px 0;
     font-size: 2.5em;
     font-weight: 700;
-    color: white;
-    text-shadow: black 1px 1px 2px;
     margin: 0;
     background-image: url('pictures/LOGO.png');
     background-size: cover;
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
-    background-color: transparent;
-   
-
 }
 header > a{
     padding-top: 20px;
@@ -105,24 +101,47 @@ header > a{
 nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;       
+    text-decoration: none;
+    text-shadow: black 1px 1px 2px;
+    transition: color 0.3s ease;
 }
 header >#itens {
     font-family: 'google sans code', serif;
-    position: absolute;
+    position: fixed;
     text-decoration: none;
-    padding: 10px 10px;
-    font-family: 'google sans code', serif;
+    padding: 2px 2px;
     font-weight: 400;
     font-size: 0.8em;
-    display: inline-block;
-    background-color: black;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-shadow: black 1px 1px 2px; 
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    background-color: white;
+    border-radius: 5px;    
     display: none;
+    top: 45px;
+    right: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    z-index: 1000;
+    width: 80px;
+    height: auto;
   }
+#itens a {
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    font-family: 'google sans code', serif;
+    text-align: center;
+    display: block;
+    padding: 4px 0px;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin: 0;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    border-bottom: 1px solid  rgb(0, 0, 0);
+}
+#itens a:last-child {
+    border-bottom: none;
+}
 nav a:hover {
     background-color: var(--color03);
     color: white;
@@ -210,7 +229,7 @@ main{
     font-size: 1em;
     font-weight: 100;
     font-size: small;
-    ;
+    
 }
 #whatido{
     text-align: center;
@@ -254,8 +273,10 @@ main{
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
-    min-width: 100px;
+    min-width: 80px;
     max-width: 300px;
+    min-height: 100px;
+    max-height: 150px;
     height: 110px;
     width: 150px;
     margin: 10px;
@@ -410,11 +431,59 @@ main{
         padding: 0;
         justify-content: center;
     }
-
+#contact{
+    text-align: center;
+    color: black;
+    font-family: 'google sans code', serif;
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    font-weight: 100;
+    padding: 20px;
+    background-color: white;
+}
+#contact h3{
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    background-image: linear-gradient(45deg, #ff8c9d47, #f2387c );
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+#contact p{
+    line-height: 1.4;
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    font-size: 1em;
+    font-weight: 100;
+    font-size: small;
+}
+#contact a{
+    color: rgb(228, 100, 2);
+    text-decoration: none;
+    font-family: 'google sans code', serif;
+    font-weight: 600;
+    text-shadow: black 1px 1px 2px;
+    transition: color 0.3s ease;
+}
+.fa{
+    color:green;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 10px;
+    padding: 20px;
+}
 footer {
     text-align: center;
     padding: 3px;
-    margin-top: 10px;
+    margin-top: 0px;
     background-color: var(--color02);
     color: white;
     font-family: 'google sans code', serif;
@@ -423,3 +492,14 @@ footer {
     text-shadow: black 1px 1px 2px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out;
+    opacity: 0;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
