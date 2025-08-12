@@ -1,0 +1,425 @@
+ @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+ :root{
+    --color01:#F2A0C6;
+    --color02:#F257AC;
+    --color03:#6863F2;
+    --color04:#9794F2;
+    --color05:#77D9BD;
+}
+*{
+
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-indent: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--color01);
+    color: black;
+    font-family: 'google sans code', serif;
+    
+}
+body{
+    font-family: 'google sans code', serif;
+    background-color: var(--color01);
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#myself img{
+    border-radius:40% ;
+    border-width: 4px;
+    box-shadow: 2px 2px 2px rgba(254, 255, 253, 0.214);
+    max-width: 100%;
+    display: block;
+    max-height: 200px;
+    min-width: 200px;
+    text-align: center;
+    margin: auto;
+    padding: 2px;
+    
+    
+}h1, h2, h3, h4, h5, h6{
+    font-family: 'google sans code', serif;
+    color: var(--color02);
+    text-shadow: black 1px 1px 2px;
+    font-weight: 600;
+}
+header{
+    text-align: center;
+    background-image: linear-gradient(45deg, #ff8c9d47, #f2387c);
+    font-family: 'google sans code', serif;
+    color: white;
+    font-weight: 600;
+    text-shadow: black 1px 1px 2px;
+    box-shadow: 0 0 2px rgba(0, 0, 0.5);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;   
+    width: 100%;
+    
+}
+header > span{
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    padding: 20px 0 10px 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    margin: 0;
+    background-image: url('pictures/LOGO.png');
+    background-size: cover;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+   
+
+}
+header > a{
+    padding-top: 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.material-symbols-outlined {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header >#itens {
+    font-family: 'google sans code', serif;
+    position: absolute;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-family: 'google sans code', serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    display: inline-block;
+    background-color: black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-shadow: black 1px 1px 2px; 
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    display: none;
+  }
+nav a:hover {
+    background-color: var(--color03);
+    color: white;
+    text-decoration: underline;
+}
+main{
+    max-width: 1200px;
+    margin-top: 0px;
+    padding: 0 20px;
+    font-family: 'google sans code', serif;
+    color: black;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+}
+#myself{
+    text-align: center;
+    background-color: rgba(233, 87, 119, 0.478);
+    color: black;
+    font-family: 'google sans code', serif;
+    font-weight: 200;
+    font-size: 0.9em;    
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    display: block;
+    padding-top: 90px;
+
+}
+#myself h2{
+    color:white;
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#myself p{
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+#about{
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: 'google sans code', serif;
+    font-weight: 100;
+    
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    }
+#about h3{
+    color: var(--color02);
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#about img{
+    border-radius: 40%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.214);
+    max-width: 100%;
+    display: block;
+    max-height: 200px;
+    min-width: 200px;
+    text-align: center;
+    margin: auto;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+#about p{
+    line-height: 1.4;
+    text-align: justify;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    font-size: 1em;
+    font-weight: 100;
+    font-size: small;
+    ;
+}
+#whatido{
+    text-align: center;
+    background-color: var(--color01);
+    color: white;
+    font-family: 'google sans code', serif;
+    font-weight: 600;
+    text-shadow: black 1px 1px 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    padding: 20px;
+}
+#whatido h3{
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--color01);
+    color: white;
+    font-family: 'google sans code', serif;
+    font-weight: 600;
+    text-shadow: black 1px 1px 2px;
+    background-size: cover;
+    
+}
+.box > div{
+    display: inline-block;
+    background-color: var(--color02);
+    color: white;
+    font-family: 'google sans code', serif;
+    font-weight: 300;
+    text-shadow: black 1px 1px 2px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+    min-width: 100px;
+    max-width: 300px;
+    height: 110px;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    align-content: center;
+    font-size: 0.7em;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;  
+}
+.box > div:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    z-index: -1;
+}
+.box > div:hover{
+    transform: scale(1.1);
+    background-color: var(--color04);
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    display: block;
+}
+.box > div>p{
+    line-height: 1.2;
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    font-size: 1em;
+    font-weight: 400;
+    text-shadow: black 1px 1px 2px;    
+    display: none;
+}
+.box > div:hover > p{
+    display: block;
+}
+.box > #brow{
+    background-image: url('pictures/eyebrown.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+}
+.box > #eyelash{
+    background-image: url('pictures/lash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: fit-content;
+    height: 150px;
+    width: 120px;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+    }
+.box > #lashlift{
+    background-image: url('pictures/lashlift.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: fit-content;
+    height: 180px;
+    width: 200px;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+}
+.box > #eyebrowmicroblading{
+    background-image: url('pictures/micro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+    height: 97px;
+}
+.box > #lips{
+    background-image: url('pictures/lips.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+    height: 113px;
+    width: 170px;
+}
+#formation{
+    text-align: center;
+    color: black;
+    font-family: 'google sans code', serif;
+    box-shadow: 0 0 3px rgba(0, 0, 0.5);
+    font-weight: 100;
+    padding: 20px;
+    font-style: normal;
+    background-color: white;
+    padding: 20px;
+}
+    a{
+        color: var(--color05);
+        text-decoration: none;
+        font-family: 'google sans code', serif;
+        font-weight: 600;
+        text-shadow: black 1px 1px 2px;
+        transition: color 0.3s ease;
+
+    }
+    #video{
+        
+        margin: 20px;
+        padding: 0 20px;
+        border-radius: 10px;
+        background-color: #F257AC;
+        color: white;
+        font-family: 'google sans code', serif;
+        font-weight: 600;
+        text-shadow: black 1px 1px 2px;
+        border-radius: 45deg;
+        min-width: 50vw;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0.5);
+        overflow: hidden;
+    }
+    iframe{
+       
+        border-radius: 10px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.44);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background-color: var(--color02);
+        width: 100%;
+    }
+    .emoji li ::before{
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        content: "💬";
+    }
+    .emoji{
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+    }
+
+footer {
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    background-color: var(--color02);
+    color: white;
+    font-family: 'google sans code', serif;
+    font-weight: 300;
+    font-size: 0.8em;
+    text-shadow: black 1px 1px 2px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
