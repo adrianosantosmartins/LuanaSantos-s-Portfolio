@@ -228,18 +228,17 @@ main{
     padding-bottom: 20px;
     font-size: 1em;
     font-weight: 100;
-    font-size: small;
-    
+    font-size: small;    
 }
 #whatido{
     text-align: center;
-    background-color: var(--color01);
+    background-color: rgba(233, 87, 119, 0.478);
     color: white;
     font-family: 'google sans code', serif;
     font-weight: 600;
     text-shadow: black 1px 1px 2px;
     box-shadow: 0 0 3px rgba(0, 0, 0.5);
-    padding: 20px;
+    padding: 0 0 20px;    
 }
 #whatido h3{
     color: white;
@@ -247,21 +246,38 @@ main{
     font-size: 1.7em;
     font-weight: 700;
     margin: 0 0 20px;
+    padding: 20px;
+    
 }
 .box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: var(--color01);
+    text-align: center;
     color: white;
-    font-family: 'google sans code', serif;
-    font-weight: 600;
-    text-shadow: black 1px 1px 2px;
-    background-size: cover;
+    justify-content: center;
     
+    }
+.side-by-side {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.side-by-side .box-item {
+  flex: 1;
+  text-align: center;
+}
+.boxitem{
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .side-by-side {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .box > div{
     display: inline-block;
@@ -271,7 +287,6 @@ main{
     font-weight: 300;
     text-shadow: black 1px 1px 2px;
     border-radius: 10px;
-    padding: 10px;
     box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
     min-width: 80px;
     max-width: 300px;
@@ -351,6 +366,7 @@ main{
     height: 180px;
     width: 200px;
     box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+
 }
 .box > #eyebrowmicroblading{
     background-image: url('pictures/micro.jpg');
@@ -438,7 +454,7 @@ main{
     box-shadow: 0 0 3px rgba(0, 0, 0.5);
     font-weight: 100;
     padding: 20px;
-    background-color: white;
+    border: solid 10px rgba(0, 0, 0, 0.2);
 }
 #contact h3{
     color: white;
@@ -466,19 +482,17 @@ main{
     font-size: small;
 }
 #contact a{
-    color: rgb(228, 100, 2);
     text-decoration: none;
-    font-family: 'google sans code', serif;
-    font-weight: 600;
-    text-shadow: black 1px 1px 2px;
     transition: color 0.3s ease;
+    display: inline-block;
+    padding: 0 10px;
 }
 .fa{
-    color:green;
+    color: var(--color03);
+    font-size: 2em;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin: 10px;
-    padding: 20px;
+    display: inline-block;
 }
 footer {
     text-align: center;
