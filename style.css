@@ -360,7 +360,7 @@ main{
     height: 97px;
 }
 .box > #lips{
-    background-image: url('pictures/lips.jpg');
+    background-image: url('pictures/lips/lips.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -535,16 +535,18 @@ footer {
       z-index: 1000;
     }
 #imageContainer {
-      position: fixed;
-      top: 50%; left: 50%;
+      
+      height: 100%;
+      position: relative;
+      left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1001;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      max-height: 600px;
-      min-width: 350px;
+      max-height: max-content;
+      width: 320px;
     }
 #imageContainer img {
       flex: 0 0 50%;
@@ -553,5 +555,9 @@ footer {
       opacity: 0;
       transition: opacity 1s ease;
       padding: 10px;
+      border-radius: 15%;
+      width: 150px;
+      height: auto;
+      object-fit: cover;
     }
 
