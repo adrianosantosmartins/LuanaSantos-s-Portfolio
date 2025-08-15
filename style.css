@@ -369,7 +369,7 @@ main{
     width: 120px;
 }
 #formation{
-    text-align: center;
+    text-align:justify;
     color: black;
     font-family: 'google sans code', serif;
     box-shadow: 0 0 3px rgba(0, 0, 0.5);
@@ -378,7 +378,39 @@ main{
     font-style: normal;
     background-color: white;
     padding: 20px;
+    line-height: 2;
 }
+#formation ul{
+    padding: 5px;
+    border: solid black 2px;
+    border-radius: 6%;
+}
+#formation p {
+    text-align: left;
+    margin-left: 0;
+    
+
+}
+#formation h3{
+    color: var(--color02);
+    text-shadow: black 1px 1px 2px;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+#formation li{
+    border-bottom: 2px solid black;
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+#formation li:last-child{
+    border-bottom: none;
+}
+
     a{
         color: var(--color05);
         text-decoration: none;
