@@ -403,8 +403,8 @@ main{
 #formation li{
     border-bottom: 2px solid black;
     margin: 0;
-    display: inline-block;
-    white-space: nowrap;
+   
+ 
     font-size: 0.9em;
 }
 #formation li:last-child{
