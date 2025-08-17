@@ -91,3 +91,40 @@ function lash(){
 
       });
 }
+function cert(){
+  const overlay = document.getElementById('overlay');
+  const container = document.getElementById('imageContainer');
+  overlay.style.pointerEvents = 'auto';
+  overlay.style.opacity = 1;
+  container.style.marginBottom = '-300px';
+  const images = [
+        'pictures/certificate1.png'        
+      ];
+ images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        container.appendChild(img);
+
+        img.onload = () => {
+          setTimeout(() => {
+            img.style.opacity = 1;
+          }, index * 500); // delay de 500ms entre cada imagem
+        };
+      });
+
+      // Fechar overlay ao clicar nele, limpando as imagens
+      overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        container.innerHTML = '';
+        container.style.marginTop = '0px';
+        container.style.marginBottom = '20px';
+        // Increase image size
+        const imgs = container.querySelectorAll('img');
+        imgs.forEach(img => {
+          img.style.width = '500px';
+          img.style.height = '500px';
+        });
+
+      });
+}

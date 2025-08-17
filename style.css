@@ -68,6 +68,7 @@ header{
     display: block;
     position: fixed;  
     width: 100%;
+    z-index: 10; /* Ensure header/nav is above .certificado */
 }
 header > span{
     display: inline-block;
@@ -100,7 +101,6 @@ nav {
     justify-content: center;
     align-items: center;       
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 header >#itens {
     font-family: 'google sans code', serif;
@@ -255,12 +255,14 @@ main{
     text-align: center;
     color: white;
     justify-content: center;
+    position: relative;
     }
 .boxitem{
     width: 100%;
     max-width: 350px;
     text-align: center;
     margin-bottom: 16px;
+    position: fixed;
 }
 .box > div{
     background-color: var(--color04);
@@ -329,6 +331,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 0 3px rgba(252, 252, 252, 0.5);
+    left: 0;
 }
 .box > #eyelash{
     background-image: url('pictures/lash.jpg');
@@ -369,16 +372,59 @@ main{
     width: 120px;
 }
 #formation{
-    text-align:justify;
+    text-align:center;
+    position: relative;
     color: black;
     font-family: 'google sans code', serif;
     box-shadow: 0 0 3px rgba(0, 0, 0.5);
     font-weight: 100;
-    padding: 20px;
+    padding: 10px 20px;
+    max-width: 100%;
+    height: 350px;
     font-style: normal;
-    background-color: white;
-    padding: 20px;
     line-height: 2;
+    background-image: url(pictures/background.jfif);
+    display: flex;
+    justify-content: space-between;
+
+.certificado{
+    position: absolute;
+    height: 110px;
+    width: 150px;
+    background-color: #6863F2;
+    background-image: url(pictures/certificate1.png);
+    background-position: center;
+    background-size: 130%;
+    border: #fbfbfb solid 1px;
+    z-index: 1; /* Lower than nav/header */
+}
+}
+.certificado:hover{
+    transform: scale(1.1);
+    background-color: var(--color04);
+    color: white;
+    text-shadow: black 1px 1px 2px;
+    display: block;
+    cursor: pointer;
+}
+
+#cert1{
+
+}
+#cert2{
+    left: 60%;
+
+    
+
+}
+#cert3{
+    top: 50%;
+
+}
+#cert4{
+    left: 60%;
+    top: 50%;
+
 }
 #formation ul{
     padding: 5px;
@@ -392,19 +438,18 @@ main{
 
 }
 #formation h3{
-    color: var(--color02);
     text-shadow: black 1px 1px 2px;
     font-size: 1.8em;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     text-align: center;
+    color: white;
 
 }
 #formation li{
     border-bottom: 2px solid black;
     margin: 0;
     display: inline-block;
-    white-space: nowrap;
     font-size: 0.9em;
 }
 #formation li:last-child{
@@ -521,7 +566,6 @@ footer {
     font-family: 'google sans code', serif;
     font-weight: 300;
     font-size: 0.8em;
-    text-shadow: black 1px 1px 2px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .fade-in {
