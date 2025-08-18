@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;    
     text-decoration: none;
-    background-color: transparent;
 }
 html{
     scroll-behavior: smooth;
@@ -21,12 +20,12 @@ html{
     line-height: 1.5;
     background-color: var(--color01);
     color: black;
-    font-family: 'google sans code', serif;
-    
+    font-family: 'google sans code', serif;    
 }
 body{
     font-family: 'google sans code', serif;
     background-color: var(--color01);
+    height: 100vh;
     color: black;
     margin: 0;
     padding: 0;
@@ -189,17 +188,23 @@ main{
     font-family: 'google sans code', serif;
     font-weight: 100;
     box-shadow: 0 0 3px rgba(0, 0, 0.5);
-    padding: 0 20px 20px 20px;
+    padding: 10px 20px 20px 20px;
     }
 #about h3{
-    color: var(--color02);
+    color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    border-width: 0 1px 1px 0;
+    background-image: linear-gradient(45deg, #ff8c9d47, #f2387c );
+    width: max-content;
+    display: flex;
+    margin: auto ;
     text-shadow: black 1px 1px 2px;
-    font-size: 1.7em;
-    margin-bottom: 10px;
-    font-weight: 700;
-    padding-top: 20px;
-    margin-bottom: 40px;
-    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 100xp; 
 }
 #about img{
     border-radius: 40%;
@@ -212,6 +217,7 @@ main{
     margin: auto;
     padding: 2px;
     margin-bottom: 20px;
+    margin-top: 40px;
 }
 #about p{
     line-height: 2;
@@ -433,13 +439,6 @@ main{
     margin-left: 0;
 }
 #formation h3{
-    /*text-shadow: black 1px 1px 2px;
-    font-size: 1.8em;
-    font-weight: 700;
-    text-align: center;
-    display: inline;
-    width: 100vh;
-    color: white;*/
     color: white;
     border: solid 2px white;
     border-radius: 10px;

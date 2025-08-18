@@ -189,7 +189,6 @@ function micro(){
         overlay.style.pointerEvents = 'none';
         container.innerHTML = '';
         container.style.marginTop = '0px';
-
       });
 }
 function cert(){
@@ -217,11 +216,9 @@ function cert(){
   });
 
     overlay.addEventListener('click', () => {
-        overlay.style.opacity = 0;
-        overlay.style.pointerEvents = 'none';
-        container.innerHTML = '';
-        container.style.marginTop = '0px';
-
+      overlay.style.opacity = 0;
+      overlay.style.pointerEvents = 'none';
+      container.innerHTML = '';
+      container.style.marginBottom = '0px';
       });
-    
   };
