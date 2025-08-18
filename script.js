@@ -1,13 +1,10 @@
 function menu() {
-   const itens = document.getElementsByClassName('certificado'); // Select elements with class "certificado"
-   // Toggle display for all elements with class "certificado"
-   Array.from(itens).forEach(certificado => {
-     if (certificado.style.display === 'block') {
-         certificado.style.display = 'none';
-     } else {
-         certificado.style.display = 'block';
-     }
-   });
+   const itens = document.getElementById('itens');
+   if (itens.style.display === 'block') {
+       itens.style.display = 'none';
+   } else {
+       itens.style.display = 'block';
+   }
 }
 const elements = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver((entries) => {
@@ -200,12 +197,15 @@ function cert(){
   const container = document.getElementById('imageContainer');
   overlay.style.pointerEvents = 'auto';
   overlay.style.opacity = 1;
-  container.style.marginBottom = '-300px';
+  container.style.marginBottom = '-500px';
   const images = [
         'pictures/certificate1.png'        
       ];
   images.forEach((src, index) => {
     const img = document.createElement('img');
+    img.style.width = '350px';
+    img.style.height = '350px';
+    img.style.borderRadius = '0';
     img.src = src;
     container.appendChild(img);
 
@@ -221,16 +221,18 @@ function cert(){
   overlay.parentNode.replaceChild(newOverlay, overlay);
 
   newOverlay.addEventListener('click', () => {
-    // Increase image size
+    // Increase image size with transition
     const imgs = container.querySelectorAll('img');
     imgs.forEach(img => {
       img.style.width = '500px';
-      img.style.height = '500px';
+      img.style.height = '700px';
     });
-    newOverlay.style.opacity = 0;
-    newOverlay.style.pointerEvents = 'none';
-    container.innerHTML = '';
-    container.style.marginTop = '0px';
-    container.style.marginBottom = '20px';
+    setTimeout(() => {
+      newOverlay.style.opacity = 0;
+      newOverlay.style.pointerEvents = 'none';
+      container.innerHTML = '';
+      container.style.marginTop = '0px';
+      container.style.marginBottom = '20px';
+    });
   });
 }

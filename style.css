@@ -414,13 +414,13 @@ main{
 }
 #cert2{
     top: 15%;
-    left: 60%;
+    left: 50%;
 }
 #cert3{
     top: 50%;
 }
 #cert4{
-    left: 60%;
+    left: 50%;
     top: 50%;
 }
 #formation ul{
@@ -606,5 +606,6 @@ footer {
       border-radius: 15%;
       width: 150px;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
+      
     }
