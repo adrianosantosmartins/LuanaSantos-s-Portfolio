@@ -1,10 +1,13 @@
 function menu() {
-   if (itens.style.display == 'block') {
-       itens.style.display = 'none';
-   }
-      else {
-       itens.style.display = 'block';
-   }
+   const itens = document.getElementsByClassName('certificado'); // Select elements with class "certificado"
+   // Toggle display for all elements with class "certificado"
+   Array.from(itens).forEach(certificado => {
+     if (certificado.style.display === 'block') {
+         certificado.style.display = 'none';
+     } else {
+         certificado.style.display = 'block';
+     }
+   });
 }
 const elements = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver((entries) => {
@@ -91,14 +94,16 @@ function lash(){
 
       });
 }
-function cert(){
+function brow(){
   const overlay = document.getElementById('overlay');
   const container = document.getElementById('imageContainer');
   overlay.style.pointerEvents = 'auto';
   overlay.style.opacity = 1;
-  container.style.marginBottom = '-300px';
+  container.style.marginTop = '-220px';
   const images = [
-        'pictures/certificate1.png'        
+        'pictures/eyebrow/brow1.jpg',
+        'pictures/eyebrow/brow2.jpg',        
+        'pictures/eyebrow/brow3.jpg',
       ];
  images.forEach((src, index) => {
         const img = document.createElement('img');
@@ -118,13 +123,114 @@ function cert(){
         overlay.style.pointerEvents = 'none';
         container.innerHTML = '';
         container.style.marginTop = '0px';
-        container.style.marginBottom = '20px';
-        // Increase image size
-        const imgs = container.querySelectorAll('img');
-        imgs.forEach(img => {
-          img.style.width = '500px';
-          img.style.height = '500px';
-        });
 
       });
+}
+function lift(){
+  const overlay = document.getElementById('overlay');
+  const container = document.getElementById('imageContainer');
+  overlay.style.pointerEvents = 'auto';
+  overlay.style.opacity = 1;
+  container.style.marginTop = '-220px';
+  const images = [
+        'pictures/lashlift/lash.jpg',
+        'pictures/lashlift/lash2.jpg',        
+        'pictures/lashlift/lash3.jpg',
+        'pictures/lashlift/lash4.jpg',
+        'pictures/lashlift/lash5.jpg',
+      ];
+ images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        container.appendChild(img);
+
+        img.onload = () => {
+          setTimeout(() => {
+            img.style.opacity = 1;
+          }, index * 500); // delay de 500ms entre cada imagem
+        };
+      });
+
+      // Fechar overlay ao clicar nele, limpando as imagens
+      overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        container.innerHTML = '';
+        container.style.marginTop = '0px';
+
+      });
+}
+function micro(){
+  const overlay = document.getElementById('overlay');
+  const container = document.getElementById('imageContainer');
+  overlay.style.pointerEvents = 'auto';
+  overlay.style.opacity = 1;
+  container.style.marginTop = '-220px';
+  const images = [
+        'pictures/micro/micro.jpg',
+        'pictures/micro/micro2.jpg',        
+        'pictures/micro/micro3.jpg',
+        'pictures/micro/micro4.jpg',
+        'pictures/micro/micro5.jpg',
+        'pictures/micro/micro6.jpg'
+      ];
+ images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        container.appendChild(img);
+
+        img.onload = () => {
+          setTimeout(() => {
+            img.style.opacity = 1;
+          }, index * 500); // delay de 500ms entre cada imagem
+        };
+      });
+
+      // Fechar overlay ao clicar nele, limpando as imagens
+      overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        container.innerHTML = '';
+        container.style.marginTop = '0px';
+
+      });
+}
+function cert(){
+  const overlay = document.getElementById('overlay');
+  const container = document.getElementById('imageContainer');
+  overlay.style.pointerEvents = 'auto';
+  overlay.style.opacity = 1;
+  container.style.marginBottom = '-300px';
+  const images = [
+        'pictures/certificate1.png'        
+      ];
+  images.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    container.appendChild(img);
+
+    img.onload = () => {
+      setTimeout(() => {
+        img.style.opacity = 1;
+      }, index * 500); // delay de 500ms entre cada imagem
+    };
+  });
+
+  // Remove any previous click event listeners by replacing the node
+  const newOverlay = overlay.cloneNode(true);
+  overlay.parentNode.replaceChild(newOverlay, overlay);
+
+  newOverlay.addEventListener('click', () => {
+    // Increase image size
+    const imgs = container.querySelectorAll('img');
+    imgs.forEach(img => {
+      img.style.width = '500px';
+      img.style.height = '500px';
+    });
+    newOverlay.style.opacity = 0;
+    newOverlay.style.pointerEvents = 'none';
+    container.innerHTML = '';
+    container.style.marginTop = '0px';
+    container.style.marginBottom = '20px';
+  });
 }
