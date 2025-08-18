@@ -216,23 +216,12 @@ function cert(){
     };
   });
 
-  // Remove any previous click event listeners by replacing the node
-  const newOverlay = overlay.cloneNode(true);
-  overlay.parentNode.replaceChild(newOverlay, overlay);
+    overlay.addEventListener('click', () => {
+        overlay.style.opacity = 0;
+        overlay.style.pointerEvents = 'none';
+        container.innerHTML = '';
+        container.style.marginTop = '0px';
 
-  newOverlay.addEventListener('click', () => {
-    // Increase image size with transition
-    const imgs = container.querySelectorAll('img');
-    imgs.forEach(img => {
-      img.style.width = '500px';
-      img.style.height = '700px';
-    });
-    setTimeout(() => {
-      newOverlay.style.opacity = 0;
-      newOverlay.style.pointerEvents = 'none';
-      container.innerHTML = '';
-      container.style.marginTop = '0px';
-      container.style.marginBottom = '20px';
-    });
-  });
-}
+      });
+    
+  };
